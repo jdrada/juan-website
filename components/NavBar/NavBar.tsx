@@ -8,7 +8,7 @@ const NavBar: React.FunctionComponent = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
 
   const navigation = [
-    { title: "Bio", path: "/" },
+    { title: "Home", path: "/" },
     { title: "Experience", path: "/experience" },
     { title: "Projects", path: "/projects" },
   ];

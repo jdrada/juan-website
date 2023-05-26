@@ -21,7 +21,7 @@ const HomePage = () => {
         <section className="max-w-screen-xl mx-auto px-4 ">
           <div className="gap-12 text-gray-600 md:px-8 md:flex">
             <div className="flex-none space-y-5 max-w-xl">
-              <p>👋 Hello World! I&apos;m a:</p>
+              <p>👋 Hello World! My name is Juan and I&apos;m a:</p>
               <div className="flex gap-4">
                 <h1 className="text-4xl text-gray-800 font-extrabold sm:text-5xl sm:mt-2">
                   <b className="text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
