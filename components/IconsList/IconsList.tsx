@@ -2,6 +2,7 @@ import React from "react";
 import {
   SiCss3,
   SiGit,
+  SiGo,
   SiGraphql,
   SiHtml5,
   SiJavascript,
