@@ -11,8 +11,6 @@ const NavBar: React.FunctionComponent = () => {
     { title: "Bio", path: "/" },
     { title: "Experience", path: "/experience" },
     { title: "Projects", path: "/projects" },
-    { title: "Guides", path: "javascript:void(0)" },
-    { title: "Blog", path: "javascript:void(0)" },
   ];
 
   return (
