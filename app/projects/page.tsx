@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { FiExternalLink, FiGithub, FiGitlab } from "react-icons/fi";
+import uledgerPortal from "../../public/uledger-portal.png";
+import blockchainExplorer from "../../public/uledger-blockchain-explorer.png";
+import verify from "../../public/uledger-verify.png";
+import contaditoLanding from "../../public/contadito-landing.png";
+import contadito from "../../public/contadito.png";
+import genie from "../../public/genie.png";
 const posts = [
   {
     title: "ULedger Blockchain Explorer",
     desc: "ULedger blockchain explorer provides a view of block and transactions on the ULedger blockchain. It enables users to track and access real-time and historical data.",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: blockchainExplorer,
     status: "Production",
     type: "Full-Stack Development",
     technologies:
@@ -19,7 +25,7 @@ const posts = [
   {
     title: "ULedger Portal",
     desc: "ULedger's one-stop platform for managing blockchain usage, administering user accounts, submitting support tickets, and enabling many more features.",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: uledgerPortal,
     status: "Production",
     type: "Full-Stack Development",
     technologies:
@@ -34,7 +40,7 @@ const posts = [
   {
     title: "ULedger Verify",
     desc: "ULedger Verify is a secure email verification service that uses the ULedger blockchain to securely verify emails, leveraging the immutable nature of the blockchain to create tamper-proof records.",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: verify,
     status: "On development",
     type: "Full-Stack Development",
     technologies: "TypeScript | React.js | Nest.js | Scss | Auth0",
@@ -48,7 +54,7 @@ const posts = [
   {
     title: "Contadito SaaS Landing Page",
     desc: "Landing page aimed at cold-selling Contadito SaaS and products, integrated with CRM ",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: contaditoLanding,
     status: "On development",
     type: "Frontend Development",
     technologies: "TypeScript | Next.js v13 | Tailwind CSS | Strapi CMS ",
@@ -62,7 +68,7 @@ const posts = [
   {
     title: "Contadito App",
     desc: "Accounting solution for PYMES in Honduras",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: contadito,
     status: "Production",
     type: "Frontend Development",
     technologies:
@@ -77,7 +83,7 @@ const posts = [
   {
     title: "Genie App",
     desc: "Genie is a POC that let users in Berlin publish wishes and get free items from owners that don't need them anymore. (Not released yet.)",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: genie,
     status: "On development",
     type: "Frontend Development",
     technologies:
@@ -100,7 +106,23 @@ const ProjectsPage = () => {
             Work
           </h1>
           <p className="text-gray-600">
-            Blogs that are loved by the community. Updated every hour.
+            Some of the projects I have worked on. Want to see more? Check my{" "}
+            <a
+              className="text-indigo-500"
+              href="https://gitlab.com/jdrada"
+              target="_blank"
+            >
+              GitLab
+            </a>{" "}
+            or{" "}
+            <a
+              className="text-indigo-500"
+              href="https://gitlab.com/jdrada"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            .
           </p>
         </div>
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3 ">
@@ -110,12 +132,15 @@ const ProjectsPage = () => {
                 className="w-full mx-auto group sm:max-w-sm border rounded-t-lg shadow"
                 key={key}
               >
-                {/*  eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
+                  style={{
+                    height: "200px",
+                  }}
                   src={items.img}
                   alt={items.title}
-                  className="w-full rounded-t-lg"
+                  className="w-full rounded-t-lg "
                 />
+
                 <div className="my-2 pt-1 space-y-2 px-3 mx-2">
                   <div className="flex items-center justify-between text-sm text-gray-600">
                     <span className="block text-indigo-600 text-sm">
