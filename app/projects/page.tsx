@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { FiExternalLink, FiGithub, FiGitlab } from "react-icons/fi";
+import uledgerPortal from "../../public/uledger-portal.png";
+import blockchainExplorer from "../../public/uledger-blockchain-explorer.png";
+import verify from "../../public/uledger-verify.png";
 const posts = [
   {
     title: "ULedger Blockchain Explorer",
     desc: "ULedger blockchain explorer provides a view of block and transactions on the ULedger blockchain. It enables users to track and access real-time and historical data.",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: blockchainExplorer,
     status: "Production",
     type: "Full-Stack Development",
     technologies:
@@ -19,7 +22,7 @@ const posts = [
   {
     title: "ULedger Portal",
     desc: "ULedger's one-stop platform for managing blockchain usage, administering user accounts, submitting support tickets, and enabling many more features.",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: uledgerPortal,
     status: "Production",
     type: "Full-Stack Development",
     technologies:
@@ -34,7 +37,7 @@ const posts = [
   {
     title: "ULedger Verify",
     desc: "ULedger Verify is a secure email verification service that uses the ULedger blockchain to securely verify emails, leveraging the immutable nature of the blockchain to create tamper-proof records.",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    img: verify,
     status: "On development",
     type: "Full-Stack Development",
     technologies: "TypeScript | React.js | Nest.js | Scss | Auth0",
@@ -45,50 +48,50 @@ const posts = [
     gitlabIcon: true,
     gitlabLink: "https://gitlab.com/jdrada",
   },
-  {
-    title: "Contadito SaaS Landing Page",
-    desc: "Landing page aimed at cold-selling Contadito SaaS and products, integrated with CRM ",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    status: "On development",
-    type: "Frontend Development",
-    technologies: "TypeScript | Next.js v13 | Tailwind CSS | Strapi CMS ",
-    href: "https://contadito.hn/",
-    linkIcon: FiExternalLink,
-    githubIcon: true,
-    githubLink: "https://gitlab.com/jdrada",
-    gitlabIcon: false,
-    gitlabLink: "https://gitlab.com/jdrada",
-  },
-  {
-    title: "Contadito App",
-    desc: "Accounting solution for PYMES in Honduras",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    status: "Production",
-    type: "Frontend Development",
-    technologies:
-      "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
-    href: "https://contadito.hn/",
-    linkIcon: FiExternalLink,
-    githubIcon: true,
-    githubLink: "https://gitlab.com/jdrada",
-    gitlabIcon: false,
-    gitlabLink: "https://gitlab.com/jdrada",
-  },
-  {
-    title: "Genie App",
-    desc: "Genie is a POC that let users in Berlin publish wishes and get free items from owners that don't need them anymore. (Not released yet.)",
-    img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-    status: "On development",
-    type: "Frontend Development",
-    technologies:
-      "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
-    href: "https://contadito.hn/",
-    linkIcon: FiExternalLink,
-    githubIcon: true,
-    githubLink: "https://gitlab.com/jdrada",
-    gitlabIcon: false,
-    gitlabLink: "https://gitlab.com/jdrada",
-  },
+  // {
+  //   title: "Contadito SaaS Landing Page",
+  //   desc: "Landing page aimed at cold-selling Contadito SaaS and products, integrated with CRM ",
+  //   img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  //   status: "On development",
+  //   type: "Frontend Development",
+  //   technologies: "TypeScript | Next.js v13 | Tailwind CSS | Strapi CMS ",
+  //   href: "https://contadito.hn/",
+  //   linkIcon: FiExternalLink,
+  //   githubIcon: true,
+  //   githubLink: "https://gitlab.com/jdrada",
+  //   gitlabIcon: false,
+  //   gitlabLink: "https://gitlab.com/jdrada",
+  // },
+  // {
+  //   title: "Contadito App",
+  //   desc: "Accounting solution for PYMES in Honduras",
+  //   img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  //   status: "Production",
+  //   type: "Frontend Development",
+  //   technologies:
+  //     "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
+  //   href: "https://contadito.hn/",
+  //   linkIcon: FiExternalLink,
+  //   githubIcon: true,
+  //   githubLink: "https://gitlab.com/jdrada",
+  //   gitlabIcon: false,
+  //   gitlabLink: "https://gitlab.com/jdrada",
+  // },
+  // {
+  //   title: "Genie App",
+  //   desc: "Genie is a POC that let users in Berlin publish wishes and get free items from owners that don't need them anymore. (Not released yet.)",
+  //   img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+  //   status: "On development",
+  //   type: "Frontend Development",
+  //   technologies:
+  //     "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
+  //   href: "https://contadito.hn/",
+  //   linkIcon: FiExternalLink,
+  //   githubIcon: true,
+  //   githubLink: "https://gitlab.com/jdrada",
+  //   gitlabIcon: false,
+  //   gitlabLink: "https://gitlab.com/jdrada",
+  // },
 ];
 
 const ProjectsPage = () => {
@@ -111,11 +114,17 @@ const ProjectsPage = () => {
                 key={key}
               >
                 {/*  eslint-disable-next-line @next/next/no-img-element */}
-                <img
+
+                <Image
+                  style={{
+                    height: "200px",
+                    width: "auto",
+                  }}
                   src={items.img}
                   alt={items.title}
-                  className="w-full rounded-t-lg"
+                  className="w-full rounded-t-lg "
                 />
+
                 <div className="my-2 pt-1 space-y-2 px-3 mx-2">
                   <div className="flex items-center justify-between text-sm text-gray-600">
                     <span className="block text-indigo-600 text-sm">
