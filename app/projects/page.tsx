@@ -3,6 +3,9 @@ import { FiExternalLink, FiGithub, FiGitlab } from "react-icons/fi";
 import uledgerPortal from "../../public/uledger-portal.png";
 import blockchainExplorer from "../../public/uledger-blockchain-explorer.png";
 import verify from "../../public/uledger-verify.png";
+import contaditoLanding from "../../public/contadito-landing.png";
+import contadito from "../../public/contadito.png";
+import genie from "../../public/genie.png";
 const posts = [
   {
     title: "ULedger Blockchain Explorer",
@@ -48,50 +51,50 @@ const posts = [
     gitlabIcon: true,
     gitlabLink: "https://gitlab.com/jdrada",
   },
-  // {
-  //   title: "Contadito SaaS Landing Page",
-  //   desc: "Landing page aimed at cold-selling Contadito SaaS and products, integrated with CRM ",
-  //   img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-  //   status: "On development",
-  //   type: "Frontend Development",
-  //   technologies: "TypeScript | Next.js v13 | Tailwind CSS | Strapi CMS ",
-  //   href: "https://contadito.hn/",
-  //   linkIcon: FiExternalLink,
-  //   githubIcon: true,
-  //   githubLink: "https://gitlab.com/jdrada",
-  //   gitlabIcon: false,
-  //   gitlabLink: "https://gitlab.com/jdrada",
-  // },
-  // {
-  //   title: "Contadito App",
-  //   desc: "Accounting solution for PYMES in Honduras",
-  //   img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-  //   status: "Production",
-  //   type: "Frontend Development",
-  //   technologies:
-  //     "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
-  //   href: "https://contadito.hn/",
-  //   linkIcon: FiExternalLink,
-  //   githubIcon: true,
-  //   githubLink: "https://gitlab.com/jdrada",
-  //   gitlabIcon: false,
-  //   gitlabLink: "https://gitlab.com/jdrada",
-  // },
-  // {
-  //   title: "Genie App",
-  //   desc: "Genie is a POC that let users in Berlin publish wishes and get free items from owners that don't need them anymore. (Not released yet.)",
-  //   img: "https://images.unsplash.com/photo-1556155092-490a1ba16284?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-  //   status: "On development",
-  //   type: "Frontend Development",
-  //   technologies:
-  //     "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
-  //   href: "https://contadito.hn/",
-  //   linkIcon: FiExternalLink,
-  //   githubIcon: true,
-  //   githubLink: "https://gitlab.com/jdrada",
-  //   gitlabIcon: false,
-  //   gitlabLink: "https://gitlab.com/jdrada",
-  // },
+  {
+    title: "Contadito SaaS Landing Page",
+    desc: "Landing page aimed at cold-selling Contadito SaaS and products, integrated with CRM ",
+    img: contaditoLanding,
+    status: "On development",
+    type: "Frontend Development",
+    technologies: "TypeScript | Next.js v13 | Tailwind CSS | Strapi CMS ",
+    href: "https://contadito.hn/",
+    linkIcon: FiExternalLink,
+    githubIcon: true,
+    githubLink: "https://gitlab.com/jdrada",
+    gitlabIcon: false,
+    gitlabLink: "https://gitlab.com/jdrada",
+  },
+  {
+    title: "Contadito App",
+    desc: "Accounting solution for PYMES in Honduras",
+    img: contadito,
+    status: "Production",
+    type: "Frontend Development",
+    technologies:
+      "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
+    href: "https://contadito.hn/",
+    linkIcon: FiExternalLink,
+    githubIcon: true,
+    githubLink: "https://gitlab.com/jdrada",
+    gitlabIcon: false,
+    gitlabLink: "https://gitlab.com/jdrada",
+  },
+  {
+    title: "Genie App",
+    desc: "Genie is a POC that let users in Berlin publish wishes and get free items from owners that don't need them anymore. (Not released yet.)",
+    img: genie,
+    status: "On development",
+    type: "Frontend Development",
+    technologies:
+      "TypeScript | Next.js v13 | GraphQL | Chakra UI | Strapi CMS ",
+    href: "https://contadito.hn/",
+    linkIcon: FiExternalLink,
+    githubIcon: true,
+    githubLink: "https://gitlab.com/jdrada",
+    gitlabIcon: false,
+    gitlabLink: "https://gitlab.com/jdrada",
+  },
 ];
 
 const ProjectsPage = () => {
@@ -103,7 +106,23 @@ const ProjectsPage = () => {
             Work
           </h1>
           <p className="text-gray-600">
-            Blogs that are loved by the community. Updated every hour.
+            Some of the projects I have worked on. Want to see more? Check my{" "}
+            <a
+              className="text-indigo-500"
+              href="https://gitlab.com/jdrada"
+              target="_blank"
+            >
+              GitLab
+            </a>{" "}
+            or{" "}
+            <a
+              className="text-indigo-500"
+              href="https://gitlab.com/jdrada"
+              target="_blank"
+            >
+              GitHub
+            </a>
+            .
           </p>
         </div>
         <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3 ">
@@ -113,12 +132,9 @@ const ProjectsPage = () => {
                 className="w-full mx-auto group sm:max-w-sm border rounded-t-lg shadow"
                 key={key}
               >
-                {/*  eslint-disable-next-line @next/next/no-img-element */}
-
                 <Image
                   style={{
                     height: "200px",
-                    width: "auto",
                   }}
                   src={items.img}
                   alt={items.title}
