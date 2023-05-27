@@ -3,9 +3,10 @@ const Banner = () => {
     <div className="bg-indigo-600">
       <div className="max-w-screen-xl mx-auto px-4 py-1 text-white sm:text-center md:px-8">
         <p className="font-medium">
-          I just released a new TypeScript Tutorial{" "}
+          My TypeScript course is about to be released{" "}
           <a
-            href="javascript:(0)"
+            href="https://www.linkedin.com/in/juandrada/"
+            target="_blank"
             className="font-semibold underline duration-150 hover:text-indigo-100 inline-flex items-center gap-x-1"
           >
             Check it out!

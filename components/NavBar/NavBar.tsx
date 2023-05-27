@@ -56,7 +56,9 @@ const NavBar: React.FunctionComponent = () => {
           </nav>
           <div className="hidden md:inline-block">
             <a
-              href="javascript:void(0)"
+              href="/Juan_Carlos_Resume.pdf"
+              download="Juan_Carlos_Resume"
+              target="_blank"
               className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
             >
               Download CV

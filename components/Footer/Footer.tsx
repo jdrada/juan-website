@@ -4,48 +4,25 @@ const Footer: React.FunctionComponent = () => {
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="py-4 border-t items-center justify-between sm:flex">
           <p className="text-gray-600 hidden sm:block">
-            Made with Next.js 13 + TypesScript ❤️ | Juan C. Drada
+            Feel free to contact me via{" "}
+            <a className="text-indigo-500" href="mailto: jdrada.dev@gmail.com">
+              Email
+            </a>{" "}
+            or follow me in{" "}
+            <a
+              className="text-indigo-500"
+              href="https://www.linkedin.com/in/juandrada/"
+            >
+              Linkedin
+            </a>
+            .
           </p>
           <div className="flex items-center gap-x-6 text-gray-400">
-            <a href="javascript:void()">
-              <svg
-                className="w-6 h-6 hover:text-gray-500 duration-150"
-                fill="none"
-                viewBox="0 0 48 48"
-              >
-                <g clip-path="url(#a)">
-                  <path
-                    fill="currentColor"
-                    d="M48 24C48 10.745 37.255 0 24 0S0 10.745 0 24c0 11.979 8.776 21.908 20.25 23.708v-16.77h-6.094V24h6.094v-5.288c0-6.014 3.583-9.337 9.065-9.337 2.625 0 5.372.469 5.372.469v5.906h-3.026c-2.981 0-3.911 1.85-3.911 3.75V24h6.656l-1.064 6.938H27.75v16.77C39.224 45.908 48 35.978 48 24z"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="a">
-                    <path fill="#fff" d="M0 0h48v48H0z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-            <a href="javascript:void()">
-              <svg
-                className="w-6 h-6 hover:text-gray-500 duration-150"
-                fill="none"
-                viewBox="0 0 48 48"
-              >
-                <g clip-path="url(#clip0_17_80)">
-                  <path
-                    fill="currentColor"
-                    d="M15.1 43.5c18.11 0 28.017-15.006 28.017-28.016 0-.422-.01-.853-.029-1.275A19.998 19.998 0 0048 9.11c-1.795.798-3.7 1.32-5.652 1.546a9.9 9.9 0 004.33-5.445 19.794 19.794 0 01-6.251 2.39 9.86 9.86 0 00-16.788 8.979A27.97 27.97 0 013.346 6.299 9.859 9.859 0 006.393 19.44a9.86 9.86 0 01-4.462-1.228v.122a9.844 9.844 0 007.901 9.656 9.788 9.788 0 01-4.442.169 9.867 9.867 0 009.195 6.843A19.75 19.75 0 010 39.078 27.937 27.937 0 0015.1 43.5z"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_17_80">
-                    <path fill="#fff" d="M0 0h48v48H0z" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </a>
-            <a href="javascript:void()">
+            <a
+              href="https://github.com/jdrada"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="none"
@@ -66,7 +43,11 @@ const Footer: React.FunctionComponent = () => {
                 </defs>
               </svg>
             </a>
-            <a href="javascript:void()">
+            <a
+              href="https://www.instagram.com/jcdrada/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <svg
                 className="w-6 h-6 hover:text-gray-500 duration-150"
                 fill="currentColor"
