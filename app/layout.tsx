@@ -1,7 +1,6 @@
-import NavBar from "@/components/NavBar/NavBar";
 import "./globals.css";
-import Footer from "@/components/Footer/Footer";
-import Banner from "@/components/Banner/Banner";
+import { Providers } from "./providers";
+import NavBar from "@/components/NavBar/NavBar";
 
 export const metadata = {
   title: "Juan Carlos O. Drada",
@@ -14,14 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <link rel="icon" href="/ico" />
+    <html lang="en" className="dark">
       <body>
-        <div className="flex flex-col h-screen justify-between">
+        <Providers>
           <NavBar />
-          <main className="overflow-auto">{children}</main>
-          <Footer />
-        </div>
+          <div className="flex flex-col gap-20">{children}</div>
+        </Providers>
       </body>
     </html>
   );

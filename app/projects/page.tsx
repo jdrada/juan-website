@@ -125,7 +125,7 @@ const ProjectsPage = () => {
             .
           </p>
         </div>
-        <ul className="grid gap-x-8 gap-y-10 mt-16 sm:grid-cols-2 lg:grid-cols-3 ">
+        <ul className="grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 ">
           {posts.map((items, key) => {
             return (
               <li

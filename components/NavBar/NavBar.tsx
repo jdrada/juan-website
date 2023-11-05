@@ -1,73 +1,135 @@
 "use client";
-import { useState } from "react";
-import { HamburgerClosed, HamburgerOpen } from "./Hamburger";
-import Link from "next/link";
-import Banner from "../Banner/Banner";
+import React, { useEffect, useMemo, useState } from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarMenuToggle,
+  NavbarMenuItem,
+  NavbarMenu,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+  Code,
+  Snippet,
+} from "@nextui-org/react";
+import { FaLaptopCode } from "react-icons/fa";
 
-const NavBar: React.FunctionComponent = () => {
-  const [isHamburgerOpen, setIsHamburgerOpen] = useState<boolean>(false);
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navigation = [
-    { title: "Bio", path: "/" },
-    { title: "Experience", path: "/experience" },
-    { title: "Projects", path: "/projects" },
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
   ];
 
   return (
-    <header>
-      <Banner />
-      <div className="fixed transparent w-full border-b md:border-0 md:static">
-        <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-          <div className="flex items-center justify-between py-3 md:py-3 md:block">
-            {/* logo */}
-            <Link href="/">
-              <span className="text-2xl font-extrabold sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#4F46E5] to-[#E114E5]">
-                {"<JC/>"}
-              </span>
-            </Link>
-            {/* Hamburger */}
-            <div className="md:hidden">
-              <button
-                className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
-                onClick={() => setIsHamburgerOpen(!isHamburgerOpen)}
-              >
-                {isHamburgerOpen ? <HamburgerOpen /> : <HamburgerClosed />}
-              </button>
-            </div>
-          </div>
-          <nav
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              isHamburgerOpen ? "block" : "hidden"
-            }`}
+    <Navbar
+      shouldHideOnScroll
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+    >
+      <NavbarContent className="sm:hidden" justify="start">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        />
+      </NavbarContent>
+      <NavbarContent className="hidden sm:flex" justify="start">
+        <FaLaptopCode className=" text-2xl" />
+        <NavbarBrand>
+          {/* <p className="font-bold text-inherit">Juan Drada</p> */}
+          <a
+            aria-label="Juan Carlos GitHub page"
+            href="https://github.com/jdrada"
+            target="_blank"
+            rel="noopener"
           >
-            {/* Navigation Buttons */}
-            <ul className="justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
-              {navigation.map((item) => {
-                return (
-                  <li
-                    key={item.title}
-                    className="text-gray-600 hover:text-indigo-600"
-                  >
-                    <Link href={item.path}>{item.title}</Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-          <div className="hidden md:inline-block">
-            <a
-              href="/Juan_C_Drada_Resume.pdf"
-              download="/Juan_C_Drada_Resume"
-              target="_blank"
-              className="py-3 px-4 text-white bg-indigo-600 hover:bg-indigo-700 rounded-md shadow"
+            <Code
+              className="transition duration-50 ease-in-out hover:text-warning cursor-pointer"
+              color={"primary"}
+              size="sm"
             >
-              Download CV
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-  );
-};
+              <span className="text-neutral-400 hidden md:inline">
+                open -n github
+              </span>{" "}
+              @JDrada
+            </Code>
+          </a>
+        </NavbarBrand>
+      </NavbarContent>
 
-export default NavBar;
+      <NavbarContent className="sm:hidden pr-3" justify="center">
+        <NavbarBrand>
+          <Code
+            className="transition duration-1000 ease-in-out"
+            color={"primary"}
+            size="sm"
+          >
+            @JDrada
+          </Code>
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Bio
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Experience
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Projects
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button
+            as={Link}
+            color="primary"
+            href="#"
+            variant="bordered"
+            size="sm"
+          >
+            Download CV
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              className="w-full"
+              color={
+                index === 2
+                  ? "warning"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
+              }
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
+  );
+}
