@@ -18,8 +18,8 @@ import Experience from "@/components/Experience/Experience";
 const HomePage = () => {
   return (
     <>
-      <section>
-        <div className="md:border border-neutral-900 h-fit md:h-[50vh] 2xl:h-[25vh] w-full bg-transparent relative flex justify-center items-center">
+      <section id="home">
+        <div className="ring-4 ring-black md:border-4  border-black h-fit md:h-[50vh] 2xl:h-[80vh] w-full bg-transparent relative flex justify-center items-center">
           <Image
             priority
             className="testo h-full w-full object-cover absolute hidden md:inline"
@@ -43,7 +43,7 @@ const HomePage = () => {
             className="border-1 border-black w-fit rounded-lg shadow shadow-black"
           >
             <CardBody>
-              <div className="flex flex-col items-center">
+              <div className="flex flex-col items-center md:p-6">
                 <p
                   className={` ${roboto.className} text-danger mb-4 text-7xl md:text-7xl text-center  break-words`}
                 >
@@ -64,9 +64,9 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-4">
-        <div className="p-8 text-neutral-400 text-center md:text-left font-normal md:border border-neutral-700 rounded-lg">
-          <h4 className="text-neutral-500 mb-2 text-center font-light w-full ">
+      <section id="About" className="grid md:grid-cols-2 gap-4">
+        <div className="p-8 text-neutral-400 text-center md:text-left md:border border-neutral-700 rounded-lg">
+          <h4 className="text-neutral-400 mb-2 text-center font-light w-full ">
             About Me
           </h4>
           I&apos;m a<span className="text-white"> Frontend Developer</span> with
@@ -83,7 +83,7 @@ const HomePage = () => {
         </div>
 
         <div className="p-8 flex flex-col items-center gap-4 md:border border-neutral-700 rounded-lg">
-          <h4 className="text-neutral-500 mb-2 text-center font-light w-full ">
+          <h4 className="text-neutral-400 mb-2 text-center font-light w-full ">
             Get to know me better
           </h4>
           <div className="flex flex-wrap justify-center gap-4 items-center ">
