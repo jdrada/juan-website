@@ -13,11 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark scroll-smooth scroll-mt-6 snap-start">
+    <html lang="en" className="dark scroll-smooth scroll-mt-4 snap-start">
       <body>
         <Providers>
           <NavBar />
-          <div className="flex flex-col gap-20">{children}</div>
+          <div className="flex flex-col gap-4 border border-neutral-700">
+            {children}
+          </div>
         </Providers>
       </body>
     </html>

@@ -12,6 +12,13 @@ const config = {
     title: ["Roboto", "ui-sans-serif", "system-ui"],
   },
   theme: {
+    container: {
+      padding: {
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
     extend: {},
   },
   darkMode: "class",

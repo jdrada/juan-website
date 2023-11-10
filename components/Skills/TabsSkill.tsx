@@ -10,7 +10,7 @@ const TabsSkill = () => {
 
   return (
     <>
-      <div className="flex w-full flex-col gap-4 p-4 border border-neutral-700 rounded-lg items-center">
+      <div className="flex w-full flex-col gap-4 p-4 items-center">
         <h2 className="text-4xl w-full font-bold text-center">
           Technologies I use
         </h2>
@@ -26,8 +26,7 @@ const TabsSkill = () => {
             key={"languages" as IWhatShow}
             title={
               <div className="flex items-center space-x-2">
-                <span className="hidden md:block">Languages & Frameworks</span>
-                <span className=" md:hidden">Languages</span>
+                <span>Languages & Frameworks</span>
               </div>
             }
           />
@@ -35,25 +34,12 @@ const TabsSkill = () => {
             key={"cicd" as IWhatShow}
             title={
               <div className="flex items-center space-x-2">
-                <span className="hidden md:block">
-                  Version Control and CI/CD
-                </span>
-                <span className=" md:hidden">CI/CD</span>
-              </div>
-            }
-          />
-          <Tab
-            key={"others" as IWhatShow}
-            title={
-              <div className="flex items-center space-x-2">
-                <span className="hidden md:block">Testing and Others</span>
-                <span className=" md:hidden">Others</span>{" "}
+                <span>Tools and others</span>
               </div>
             }
           />
         </Tabs>
         <Skills whatShow={whatShow} />
-        {/* <AccordionComponent /> */}
       </div>
     </>
   );
