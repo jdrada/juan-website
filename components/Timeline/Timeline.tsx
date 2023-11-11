@@ -1,9 +1,11 @@
+"use client";
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
   ScrollShadow,
 } from "@nextui-org/react";
+import { motion } from "framer-motion";
 import React, { useEffect, useRef } from "react";
 const Dot = ({
   important = false,
@@ -15,6 +17,7 @@ const Dot = ({
 
   desc?: string;
 }) => {
+  const [show, setShow] = React.useState(false);
   return (
     <Popover
       className="w-fit"
@@ -22,9 +25,14 @@ const Dot = ({
       showArrow={true}
       shouldCloseOnBlur
       color="primary"
+      aria-expanded={show}
+      onOpenChange={(open) => setShow(open)}
     >
       <PopoverTrigger>
-        <div className="flex flex-col items-center relative ">
+        <motion.div
+          whileHover={{ scale: 1.5 }}
+          className="flex flex-col items-center relative "
+        >
           <p className="text-xs absolute -translate-y-6">{year}</p>
           <span
             className={`relative flex ${
@@ -40,7 +48,7 @@ const Dot = ({
               } bg-primary hover:bg-sky-500`}
             ></span>
           </span>
-        </div>
+        </motion.div>
       </PopoverTrigger>
       <PopoverContent>
         <div className="px-1 py-2">
@@ -69,7 +77,10 @@ const Timeline = () => {
     }
   }, []);
   return (
-    <>
+    <section
+      id="experience-timeline"
+      className="px-2 py-20 border-t border-b border-neutral-800"
+    >
       <h2 className="text-4xl w-full font-bold text-center">
         What have I accomplished?
       </h2>
@@ -194,7 +205,7 @@ const Timeline = () => {
           <Line length={"50"} />
         </div>
       </ScrollShadow>
-    </>
+    </section>
   );
 };
 

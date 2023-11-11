@@ -10,9 +10,21 @@ const config = {
   ],
   fontFamily: {
     title: ["Roboto", "ui-sans-serif", "system-ui"],
+    sans: ["Roboto", "ui-sans-serif", "system-ui"],
   },
   theme: {
-    extend: {},
+    container: {
+      padding: {
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
+    extend: {
+      colors: {
+        dark: "rgb(17, 17, 17)",
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

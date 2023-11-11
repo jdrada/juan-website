@@ -18,18 +18,7 @@ import { FaLaptopCode } from "react-icons/fa";
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
+  const menuItems = ["About", "Skills", "Experience"];
 
   return (
     <Navbar
@@ -54,10 +43,9 @@ export default function App() {
           >
             <Code
               className="transition duration-50 ease-in-out hover:text-warning cursor-pointer"
-              color={"primary"}
               size="sm"
             >
-              <span className="text-neutral-400 hidden md:inline">
+              <span className="text-neutral-300 hidden md:inline">
                 open -n github
               </span>{" "}
               @JDrada
@@ -80,18 +68,19 @@ export default function App() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Bio
+          <Link color="foreground" href="#about">
+            About
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Experience
+
+        <NavbarItem>
+          <Link color="foreground" href="#skills">
+            Skills
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Projects
+          <Link color="foreground" href="#experience">
+            Experience
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -100,8 +89,9 @@ export default function App() {
         <NavbarItem>
           <Button
             as={Link}
+            isExternal={true}
             color="primary"
-            href="#"
+            href="./Juan_Resume.pdf"
             variant="bordered"
             size="sm"
           >
@@ -122,8 +112,9 @@ export default function App() {
                   ? "danger"
                   : "foreground"
               }
-              href="#"
+              href={`#${item.toLowerCase()}`}
               size="lg"
+              onClick={() => setIsMenuOpen(false)}
             >
               {item}
             </Link>

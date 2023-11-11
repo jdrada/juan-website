@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import "./globals.css";
 import { Providers } from "./providers";
 import NavBar from "@/components/NavBar/NavBar";
@@ -13,11 +14,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth scroll-mt-4 snap-start">
       <body>
         <Providers>
           <NavBar />
-          <div className="flex flex-col gap-20">{children}</div>
+          <div className="flex flex-col gap-4 border border-neutral-800">
+            {children}
+          </div>
+          <Footer />
         </Providers>
       </body>
     </html>
