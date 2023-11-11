@@ -2,9 +2,9 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Juan Carlos Ortiz Drada",
-    short_name: "Next.js App",
-    description: "Next.js App",
+    name: "Juan Carlos Ortiz Drada Portfolio",
+    short_name: "Juan Drada Portfolio",
+    description: "Portfolio website for Juan Carlos Ortiz Drada",
     start_url: "/",
     display: "standalone",
     background_color: "#fff",

@@ -10,6 +10,7 @@ const config = {
   ],
   fontFamily: {
     title: ["Roboto", "ui-sans-serif", "system-ui"],
+    sans: ["Roboto", "ui-sans-serif", "system-ui"],
   },
   theme: {
     container: {
@@ -19,7 +20,11 @@ const config = {
         "2xl": "6rem",
       },
     },
-    extend: {},
+    extend: {
+      colors: {
+        dark: "rgb(17, 17, 17)",
+      },
+    },
   },
   darkMode: "class",
   plugins: [nextui()],

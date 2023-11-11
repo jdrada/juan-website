@@ -7,7 +7,7 @@ const roboto = Poppins({
 });
 
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
-import { FiMail } from "react-icons/fi";
+import { SiGitlab } from "react-icons/si";
 import { Poppins } from "next/font/google";
 import { motion } from "framer-motion";
 
@@ -38,7 +38,7 @@ const MainCard = () => {
     <motion.div>
       <Card
         isBlurred
-        className="border-1 border-black w-fit rounded-lg shadow shadow-black p-10"
+        className="border-1 border-black w-fit rounded-lg shadow shadow-black md:p-10"
       >
         <CardBody>
           <div className="flex flex-col items-center p-6">
@@ -65,7 +65,7 @@ const MainCard = () => {
           >
             <motion.li key={0} variants={item}>
               <Button
-                href="https://github.com/nextui-org/nextui"
+                href="https://www.linkedin.com/in/juandrada"
                 as={Link}
                 target="_blank"
                 title="Juan Carlos Linkedin Profile"
@@ -80,13 +80,13 @@ const MainCard = () => {
             </motion.li>
             <motion.li key={1} variants={item}>
               <Button
-                href="https://github.com/nextui-org/nextui"
+                href="https://github.com/jdrada"
                 as={Link}
                 target="_blank"
-                title="Juan Carlos Linkedin Profile"
+                title="Juan Carlos Github Profile"
                 isIconOnly
                 color="default"
-                aria-label="Juan Carlos Linkedin Profile"
+                aria-label="Juan Carlos Github Profile"
                 variant="flat"
               >
                 <BsGithub className="text-2xl" />
@@ -94,32 +94,19 @@ const MainCard = () => {
             </motion.li>
             <motion.li key={2} variants={item}>
               <Button
-                href="https://github.com/nextui-org/nextui"
+                href="https://gitlab.com/jdrada"
                 as={Link}
                 target="_blank"
-                title="Juan Carlos Linkedin Profile"
+                title="Juan Carlos Gitlab Profile"
                 isIconOnly
                 color="default"
-                aria-label="Juan Carlos Linkedin Profile"
+                aria-label="Juan Carlos Gitlab Profile"
                 variant="flat"
               >
-                <BsInstagram className="text-2xl" />
+                <SiGitlab className="text-2xl" />
               </Button>
             </motion.li>
-            <motion.li key={3} variants={item}>
-              <Button
-                href="https://github.com/nextui-org/nextui"
-                as={Link}
-                target="_blank"
-                title="Juan Carlos Linkedin Profile"
-                isIconOnly
-                color="default"
-                aria-label="Juan Carlos Linkedin Profile"
-                variant="flat"
-              >
-                <FiMail className="text-2xl" />
-              </Button>
-            </motion.li>
+
             <motion.li key={4} variants={item}>
               <Snippet symbol=">" variant="flat" color="default">
                 jdrada.dev@gmail.com

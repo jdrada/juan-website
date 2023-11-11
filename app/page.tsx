@@ -1,13 +1,4 @@
 "use client";
-import { Poppins } from "next/font/google";
-
-const roboto = Poppins({
-  weight: ["700"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-import { Button, Card, CardBody, Link, Snippet, User } from "@nextui-org/react";
 import { Bio } from "@/components/Bio/Bio";
 import Timeline from "@/components/Timeline/Timeline";
 import Experience from "@/components/Experience/Experience";
@@ -25,11 +16,7 @@ const HomePage = () => {
 
       <Bio />
 
-      <section>
-        <Experience />
-      </section>
-
-      <footer className="h-[80px] border-t"></footer>
+      <Experience />
     </>
   );
 };

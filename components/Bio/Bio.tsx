@@ -1,21 +1,32 @@
 import React from "react";
 import TabsSkill from "../Skills/TabsSkill";
 import { SiTypescript } from "react-icons/si";
-
-function hello(): string[] {
-  return ["Hello"];
-}
+import { motion } from "framer-motion";
 
 export const Bio = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-b py-6 border-neutral-700">
-      <div className="p-3">
-        <div className="border border-neutral-700 h-full rounded-lg">
-          <div className="flex gap-2 mb-2 border-b border-neutral-700 p-4 items-center text-neutral-400 text-xs bg-neutral-900">
+    <div className="grid grid-cols-1 lg:grid-cols-2 border-t border-b py-6 md:py-10 px-6 border-neutral-800">
+      <TabsSkill />
+      <div className="">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              type: "spring",
+              bounce: 0.2,
+              duration: 0.8,
+            },
+          }}
+          viewport={{ once: true, amount: 0.8 }}
+          className="border border-neutral-700 h-full bg-dark rounded-lg"
+        >
+          <div className="flex bg-black rounded-t-lg gap-2 mb-2 border-b border-neutral-700 p-4 items-center text-neutral-400 text-xs ">
             <SiTypescript />
-            ./juan/skills
+            juan/skills.ts
           </div>
-          <div className="flex flex-col p-2 gap-1 text-neutral-400 text-sm ">
+          <div className="flex flex-col p-4 gap-1 text-neutral-400 text-xs lg:text-sm ">
             <p className="flex font-mono font-light ">
               <span className="mr-4 flex-none">1</span>
               <span>
@@ -88,9 +99,8 @@ export const Bio = () => {
               <span className="mr-4 ">9</span>{" "}
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
-      <TabsSkill />
     </div>
   );
 };

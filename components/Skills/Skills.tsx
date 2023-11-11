@@ -76,33 +76,25 @@ const cicd: ISkills[] = [
 
 const SkillCard = ({
   icon,
-
   itsName,
-
-  key,
-  color,
 }: {
   icon: any;
   itsName: string;
-
   key: string;
   color: "default" | "primary" | "secondary" | "success" | "warning" | "danger";
 }) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }}>
-      <Button
-        key={key}
-        title={itsName}
-        isIconOnly
-        aria-label={itsName}
-        variant={"light"}
-        className={`cursor-default h-20 my-4 w-20 bg-transparent rounded-lg flex flex-col justify-center items-center gap-4 `}
-        radius="none"
-      >
-        {icon}
-        <span className="text-xs mt-2">{itsName}</span>
-      </Button>
-    </motion.div>
+    <Button
+      title={itsName}
+      isIconOnly
+      aria-label={itsName}
+      variant={"light"}
+      className={`cursor-default h-20 my-4 w-20 bg-transparent rounded-lg flex flex-col justify-center items-center gap-4 `}
+      radius="none"
+    >
+      {icon}
+      <span className="text-xs mt-2">{itsName}</span>
+    </Button>
   );
 };
 
@@ -124,12 +116,14 @@ const Skills = ({ whatShow }: { whatShow: IWhatShow }) => {
       <div className="grid grid-cols-4 lg:grid-cols-6 place-items-center w-full">
         {switchy().map((icon) => {
           return (
-            <SkillCard
-              key={icon.text}
-              itsName={icon.text}
-              icon={<icon.icon size={30} />}
-              color={icon.color}
-            />
+            <motion.div key={icon.text} whileHover={{ scale: 1.1 }}>
+              <SkillCard
+                key={icon.text}
+                itsName={icon.text}
+                icon={<icon.icon size={30} />}
+                color={icon.color}
+              />
+            </motion.div>
           );
         })}
       </div>

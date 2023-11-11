@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer/Footer";
 import "./globals.css";
 import { Providers } from "./providers";
 import NavBar from "@/components/NavBar/NavBar";
@@ -17,9 +18,10 @@ export default function RootLayout({
       <body>
         <Providers>
           <NavBar />
-          <div className="flex flex-col gap-4 border border-neutral-700">
+          <div className="flex flex-col gap-4 border border-neutral-800">
             {children}
           </div>
+          <Footer />
         </Providers>
       </body>
     </html>

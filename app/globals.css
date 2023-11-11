@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Roboto&display=swap");
+
+@layer base {
+  html {
+    font-family: "Roboto", system-ui, sans-serif;
+  }
+}
 
 .testo {
   mix-blend-mode: lighten; /* Adjust blend mode as needed */

@@ -1,3 +1,4 @@
+"use client";
 import {
   Popover,
   PopoverContent,
@@ -16,6 +17,7 @@ const Dot = ({
 
   desc?: string;
 }) => {
+  const [show, setShow] = React.useState(false);
   return (
     <Popover
       className="w-fit"
@@ -23,6 +25,8 @@ const Dot = ({
       showArrow={true}
       shouldCloseOnBlur
       color="primary"
+      aria-expanded={show}
+      onOpenChange={(open) => setShow(open)}
     >
       <PopoverTrigger>
         <motion.div
@@ -75,7 +79,7 @@ const Timeline = () => {
   return (
     <section
       id="experience-timeline"
-      className="px-2 py-10 border-t border-b border-neutral-700"
+      className="px-2 py-20 border-t border-b border-neutral-800"
     >
       <h2 className="text-4xl w-full font-bold text-center">
         What have I accomplished?

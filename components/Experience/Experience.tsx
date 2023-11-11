@@ -55,6 +55,7 @@ const ProjectCard = ({
 };
 
 export default function Experience() {
+  const [actives, setActives] = React.useState<string[]>([]);
   const ULedger = (
     <div className="mx-2 mb-4">
       <div className="flex justify-between">
@@ -67,7 +68,7 @@ export default function Experience() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
-        <ul className="flex flex-col text-sm text-neutral-400 gap-4 text-justify md:pr-4 font-light">
+        <ul className="flex flex-col text-sm text-neutral-400 gap-4  md:pr-4 font-light">
           <li className="text-primary font-mono">
             {"> Achievments & contributions:"}
           </li>
@@ -145,7 +146,7 @@ export default function Experience() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
-        <ul className="flex flex-col text-sm text-neutral-400 gap-4 text-justify md:pr-4 font-light">
+        <ul className="flex flex-col text-sm text-neutral-400 gap-4  md:pr-4 font-light">
           <li className="text-primary font-mono">
             {"> Achievments & contributions:"}
           </li>
@@ -215,7 +216,7 @@ export default function Experience() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">
-        <ul className="flex flex-col text-sm text-neutral-400 gap-4 text-justify md:pr-4 font-light">
+        <ul className="flex flex-col text-sm text-neutral-400 gap-4  md:pr-4 font-light">
           <li className="text-primary font-mono">
             {"> Achievments & contributions:"}
           </li>
@@ -258,7 +259,10 @@ export default function Experience() {
   );
 
   return (
-    <>
+    <section
+      id="experience"
+      className="flex flex-col justify-center items-center w-full px-2 md:px-10 border-t border-b border-neutral-800 md:py-10"
+    >
       <h2 className="text-4xl w-full font-bold text-center">Work experience</h2>
       <Accordion selectionMode="multiple">
         <AccordionItem
@@ -282,18 +286,13 @@ export default function Experience() {
         <AccordionItem
           key="3"
           aria-label="Heimat (Startup)"
-          startContent={
-            <Avatar
-              color="primary"
-              src="https://i.pravatar.cc/150?u=a04258114e29026702d"
-            />
-          }
+          startContent={<Avatar color="primary" src="heimat.png" />}
           subtitle="Heimat | Jan. 2020 - Aug 2020"
           title={<p>Jr. Web Frontend Engineer</p>}
         >
           {Heimat}
         </AccordionItem>
       </Accordion>
-    </>
+    </section>
   );
 }
